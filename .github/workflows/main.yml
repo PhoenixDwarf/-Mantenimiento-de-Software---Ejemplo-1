@@ -1,4 +1,4 @@
-name: Python CI
+name: Ejemplo 1 - CI - Uniagustiniana
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout de código
+    - name: Checkout de código fuente
       uses: actions/checkout@v4
 
     - name: Configurar Python 3.10
@@ -19,7 +19,7 @@ jobs:
       with:
         python-version: "3.10"
 
-    - name: Instalar dependencias
+    - name: Instalar dependencias del proyecto
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
